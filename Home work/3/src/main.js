@@ -178,9 +178,9 @@ fizzBuzz(21); // 'Fizz'*/
 // function privet(e) {
 // 	console.log("Вывожу массив :" + e);
 // }
-
 // var myFunct = function (param1, param2, param3, param4) {
 // 	window.arr = [param1, param2, param3];
 // 	return arr;
 // };
+
 // console.log(myFunct(1,2,3, privet(arr)));
