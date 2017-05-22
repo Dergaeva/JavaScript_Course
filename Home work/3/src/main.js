@@ -182,5 +182,4 @@ fizzBuzz(21); // 'Fizz'*/
 // 	window.arr = [param1, param2, param3];
 // 	return arr;
 // };
-
 // console.log(myFunct(1,2,3, privet(arr)));
