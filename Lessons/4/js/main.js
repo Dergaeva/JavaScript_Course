@@ -121,7 +121,7 @@
 var project = {
 	name: "landing Page",
 	salary: "1200",
-	technology: ['css3', 'html5', 'js']
+	technology: ['css3', 'html5', 'src']
 };
 
 // for(let key in project) {
