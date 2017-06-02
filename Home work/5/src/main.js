@@ -89,7 +89,10 @@ console.log(capMe(['KARLY', 'DANIEL', 'KELSEY']));
 
  */
 
-function random(arr) {}
+function random(arr) {
+
+	let step (a)//последний элемент минус первый и все поделить на количество
+}
 
 random([1, 3, 5, 9]);
 random([0, 8, 16, 32]);
