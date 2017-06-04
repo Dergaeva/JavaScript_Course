@@ -442,13 +442,16 @@ console.log(result);
 
 /*
  * TASK 4
-
  // Функция принимает массив у которого есть свойста _id и Company.
  // верните объект, у которого ключ это _id, а значение Company
-
  */
-
 function createHashTags(arr) {
+	var obj = {};
+	arr.forEach(function (elem) {
+		//obg [584babb6eeb4137cf14c37a3]
+		obj[elem._id] = elem.company;
+	});
+	return obj;
 }
 
 console.log(createHashTags(listOfCompanys));
