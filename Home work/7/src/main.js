@@ -38,9 +38,9 @@ console.log(add(10)(5)(15)); // 30
  *
  * */
 
-var currentCount = 1;
 function patternModule() {
-	var obj = [];
+	var currentCount = 1;
+	var obj = {};
 
 	obj.method = function() {
 		return currentCount++;

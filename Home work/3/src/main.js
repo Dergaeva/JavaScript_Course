@@ -36,11 +36,13 @@ myFuncUpper("елена");
 let arr = [0, 2, 5, 10];
 
 function addToArray(arrParam, newElem) {
-	for(var i=0;i<arguments.length;i++) {
-		console.log("arguments["+i+"] = "+arguments[i])
-	}
+	//console.log(arrParam, arrParam.length);
+	arr[arrParam.length] = newElem;
 }
 addToArray(arr,'20');
+addToArray(arr,'25');
+addToArray(arr,'30');
+console.log(arr);
 // выведет
 // arguments[0] = a
 // arguments[1] = b
@@ -114,18 +116,12 @@ console.log(simpleObjectGenerator(77, userNames, 'privet kak dela chto novogo'.t
  var userName = { name: 'Елена' };
 
  function addNameToUser(newKey, newValue, userName) {
-	 var result = {
-		argument1: newKey,
-		argument2: newValue,
-		argument3: userName,
-	};
-	 var result2 = {
-		 newKey: newValue
-	 };
-	 if(result2.name === undefined){
-		 result2.name = "Елена"
+	const obj = {};
+	 obj[newKey] = newValue;
+	 if (userName.name != undefined) {
+		 obj.name = userName.name;
 	 }
-	return result2;
+	 return obj;
 }
 console.log(addNameToUser('family', 'Dergaeva', userName));
 

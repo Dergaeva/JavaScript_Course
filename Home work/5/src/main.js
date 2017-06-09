@@ -13,16 +13,20 @@
 let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
 
 function moveZeroToEnd(arr) {
-	for(var i=0; i<=arr.length; i++){
-		var elem = arr[i];
-		if(elem === 0) {
-			arr.splice(i,1);
-			arr.push(elem);
+	let zeros = [];
+	let myArray = [];
+	for(let i=0; i<arr.length;i++) {
+		let elem = arr[i];
+		if(elem === 0){
+			zeros.push(elem);
+		} else {
+			myArray.push(elem);
 		}
 	}
-	return arr;
+	return myArray.concat(zeros);
 }
 console.log(moveZeroToEnd(arr1));
+
 /*
  2. Верните сумму двух найменьших чисел в массиве
 
