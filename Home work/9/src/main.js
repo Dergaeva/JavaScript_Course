@@ -12,11 +12,11 @@
  * Используйте в задаче this
  * */
 
-//выполнила условие только к developer1
 let developer1 = {
 	skills: ['JavaScript', 'linux', 'html', 'OOP', 'Node.js'],
 	requires: ['Node.js', 'JavaScript', 'OOP'],
-	goodDev: goodDev
+	goodDev: goodDev,
+	arraySkills: arraySkills
 };
 let developer2 = {
 	experience: [
@@ -26,28 +26,28 @@ let developer2 = {
 		{ technology: 'docker' }
 	],
 	requires: ['java', 'json', 'c++', 'JavaScript'],
-	goodDev: goodDev
+	goodDev: goodDev,
+	arraySkills: arraySkills
 };
 
-var a = developer2.experience;
-var b = developer2.requires;
+function arraySkills() {
+	return this.skills ? this.skills : this.experience.map(elem => elem.technology);
+}
 
-function goodDev(a, b) {
-	var result = [];
-	for(var i = 0; i < a.length; i++) {
-		if (b.indexOf(a[i]) == -1) {
-			result.push("requered:" + a[i] + "... fail");
-		}else{
-			result.push("requered:" + a[i] + "... success");
+function goodDev(dev) {
+	this.requires.forEach(elem => {
+		if (dev.arraySkills.call(dev).includes(elem)) {
+			console.log(`requered: ${elem}... success`)
+		}else {
+			console.log(`requered: ${elem} ... fail`);
 		}
-	}
-	return result;
+	});
 }
 
 let developers = [developer1, developer2];
 developers.forEach((dev, index) => {
 	console.log(`developer ${index + 1}`);
-	console.log(dev.goodDev(a,b));
+	console.log(dev.goodDev(dev));
 });
 
 // developer 1
@@ -143,7 +143,17 @@ let junior = {};
 
 // fn.length == arguments.length
 
-function addMethod(object, name, fn) {}
+function addMethod(object, name, fn) {
+	let method = object[name];
+
+	object[name] = function() {
+		if(fn.length === arguments.length) {
+			fn.apply(this, arguments);
+		} else if (typeof method === 'function') {
+			method.apply(this, arguments);
+		}
+	};
+}
 
 addMethod(junior, 'ok', function() {
 	console.log('zero arguments');
