@@ -1,14 +1,14 @@
-let user = {
-	name: 'Oleg',
-	birthday: '25.10.1989',
-	friends: [
-		{ name: 'Даша', birthday: '25.11.1988' },
-		{ name: 'Егор', birthday: '25.10.1985' },
-		{ name: 'Саша', birthday: undefined },
-		{ name: 'Дима', birthday: '25.10.1985' }
-	],
-	myCars: []
-};
+// let user = {
+// 	name: 'Oleg',
+// 	birthday: '25.10.1989',
+// 	friends: [
+// 		{ name: 'Даша', birthday: '25.11.1988' },
+// 		{ name: 'Егор', birthday: '25.10.1985' },
+// 		{ name: 'Саша', birthday: undefined },
+// 		{ name: 'Дима', birthday: '25.10.1985' }
+// 	],
+// 	myCars: []
+// };
 
 /*
  -> Задание Напишите цикл, который отобразит в консоле имя
