@@ -12,8 +12,8 @@ function numbersBetween(a, b) {
 }
 console.log(numbersBetween(1, 5)); // 2,3,4
 console.log(numbersBetween(3, 6)); // 4,5
-console.log(numbersBetween(12, 15)); // 13,14
-console.log(numbersBetween(10, 15)); // 11, 12, 13, 14
+console.log(numbersBetween(12, 15)); // 12,14
+console.log(numbersBetween(10, 15)); // 11, 12, 12, 14
 
 /*
  2. Перепешите задачу FizzBuzz, но с использованием цикла.
