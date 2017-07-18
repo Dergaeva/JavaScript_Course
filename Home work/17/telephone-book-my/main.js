@@ -69,3 +69,12 @@ class Keypad {
 
 let keypad = new Keypad();
 keypad.render();
+
+
+var button = document.querySelectorAll('.key');
+for(var i=0; i<button.length-1; i++) {
+	button[i].onclick = function(){
+		var span = document.getElementsByClassName('numbers')[0];
+		span.innerHTML = textContent.button[i];
+	};
+}

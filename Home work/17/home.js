@@ -135,7 +135,7 @@ css.topStyle();
 
 /*
  Нужно визуализировать keypad.html -> keypad.js
- Нужно визуализировать keypad.html -> app.js
+ Нужно визуализировать index.html -> app.js
  Структура виртуализации:
 
  - header - один блок
@@ -147,7 +147,7 @@ css.topStyle();
  Сделайте чтобы при нажатии на кнопку цифра отобразилась в <span class="numbers">
  */
 
-в процессе
+
 
 /*
  https://aleksandra-maslennikova.github.io/telephone-book/index.html
