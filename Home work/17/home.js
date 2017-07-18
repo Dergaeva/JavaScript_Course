@@ -135,7 +135,7 @@ css.topStyle();
 
 /*
  Нужно визуализировать keypad.html -> keypad.js
- Нужно визуализировать index.html -> app.js
+ Нужно визуализировать keypad.html -> app.js
  Структура виртуализации:
 
  - header - один блок
