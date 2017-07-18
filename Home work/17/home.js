@@ -69,7 +69,7 @@ lider();
  * Добавьте внизу цифры с текущим активным изображением. *
  */
 
-//Папка slider
+//https://github.com/Dergaeva/JavaScript_Course/tree/master/Home%20work/17/slider
 
  /* @SUPER -> @front-end
  * Уберите в стилях li - position:absolute.
