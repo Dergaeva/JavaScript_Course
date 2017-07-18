@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel</title>
+
+</head>
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	ul, li, img {
+		margin: 0;
+		padding: 0;
+	}
+	main {
+		max-width: 748px;
+		margin: 0 auto;
+		position: relative;
+		height:320px;
+	}
+	ul {
+		list-style: none;
+		position: relative;
+		width: 2000em;
+		height: 300px;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	li {
+		-o-transform: translate3d(0px, 0px, 0px);
+		-ms-transform: translate3d(0px, 0px, 0px);
+		-moz-transform: translate3d(0px, 0px, 0px);
+		-webkit-transform: translate3d(0px, 0px, 0px);
+		transform: translate3d(0px, 0px, 0px);
+	}
+	button:hover {
+		cursor: pointer;
+	}
+	.slideshow-container {
+		position: relative;
+		margin: auto;
+		overflow: hidden;
+	}
+	.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 16px;
+		margin-top: -22px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+	}
+	/* Position the "next button" to the right */
+	.next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+		background-color: rgba(0,0,0,0.8);
+	}
+	/* The dots/bullets/indicators */
+	.dot {
+		cursor:pointer;
+		height: 20px;
+		width: 20px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		color: #fff;
+		text-align: center;
+		transition: background-color 0.6s ease;
+	}
+	.active, .dot:hover {
+		background-color: #717171;
+	}
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+	@-webkit-keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+	@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+</style>
+<body>
+
+<main>
+	<div class="slideshow-container">
+
+		<ul class="carousel">
+			<li class="mySlides fade"><img src="../img/img1.jpg" alt="1"></li>
+			<li class="mySlides fade"><img src="../img/img2.jpg" alt="2"></li>
+			<li class="mySlides fade"><img src="../img/img3.jpg" alt="3"></li>
+		</ul>
+
+		<!--Кнопки переключения-->
+		<button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+		<button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+	</div>
+
+	<!--цифры с текущим активным изображением-->
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)">1</span>
+		<span class="dot" onclick="currentSlide(2)">2</span>
+		<span class="dot" onclick="currentSlide(3)">3</span>
+	</div>
+</main>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
