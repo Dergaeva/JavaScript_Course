@@ -72,9 +72,11 @@ keypad.render();
 
 
 var button = document.querySelectorAll('.key');
-for(var i=0; i<button.length-1; i++) {
+for(let i=0; i<button.length-1; i++) {
 	button[i].onclick = function(){
 		var span = document.getElementsByClassName('numbers')[0];
-		span.innerHTML = textContent.button[i];
+		var num = button[i].textContent;
+		console.log(num);
+		span.innerHTML = num;
 	};
 }
